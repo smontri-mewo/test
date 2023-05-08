@@ -25,7 +25,8 @@ jobs:
       GIT_USER: smontri-mewo
       CONTAINER_REGISTRY: docker.io
       CONTAINER_IMAGE: smontrimewo/hello-kubernetes
-      GIT_REPOSITORY: git@github.com:smontri-mewo/hello-kubernetes.git
+      GIT_SSH_REPOSITORY: git@github.com:smontri-mewo/hello-kubernetes.git
+      GIT_HTTPS_REPOSITORY: https://github.com/smontri-mewo/test.git
       CD_CHART_REPO: deploy/helm/hello-kubernetes
       CD_MANIFEST_FILE: Chart.yaml    
 
@@ -43,4 +44,4 @@ jobs:
         run: |
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_USER"@gmewo-campus.fr"
-          git clone --single-branch --branch main $GIT_REPOSITORY
+          git clone --single-branch --branch main $GIT_HTTPS_REPOSITORY
