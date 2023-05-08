@@ -43,7 +43,7 @@ jobs:
       - name: Connect to repo
         run: |
           sudo mkdir -p /root/.ssh
-          sudo echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
+          
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_USER"@gmewo-campus.fr"
           git clone --single-branch --branch main $GIT_HTTPS_REPOSITORY
