@@ -42,7 +42,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Connect to repo
         run: |
-          mkdir -p /root/.ssh
+          ls /root/.ssh
           echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_USER"@gmewo-campus.fr"
