@@ -43,4 +43,4 @@ jobs:
         run: |
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_USER"@gmewo-campus.fr"
-          git clone --single-branch --branch main $CD_GIT_REPOSITORY
+          git clone --single-branch --branch main $GIT_REPOSITORY
